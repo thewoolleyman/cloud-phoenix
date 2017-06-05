@@ -1,0 +1,9 @@
+---
+applications:
+- name: cf_phoenix
+  memory: 1024M
+  instances: 1
+  host: cf-phoenix
+  domain: cfapps.io
+  buildpack: https://github.com/gogolok/cloudfoundry-buildpack-elixir
+  command: mix phoenix.server
