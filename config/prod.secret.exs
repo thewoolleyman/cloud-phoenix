@@ -8,13 +8,13 @@ use Mix.Config
 # file or create a script for recreating it, since it's
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or you later on).
-config :rumbl, CfPhoenix.Endpoint,
-  secret_key_base: "pVosBmQb3pCnS28G/NkaXYxoLNaelynZCWI+RnJrI6ZBDSUz6CMQNPH9CtfDZXCe"
+config :cf_phoenix, CfPhoenix.Endpoint,
+  secret_key_base: System.get_env("CF_PHOENIX_SECRET_KEY_BASE")
 
 ## Configure your database
 #config :cf_phoenix, CfPhoenix.Repo,
 #  adapter: Ecto.Adapters.Postgres,
-#  username: "postgres",
-#  password: "postgres",
-#  database: "cf_phoenix_prod",
+#  username: System.get_env("CF_PHOENIX_POSTGRES_USERNAME"),
+#  password: System.get_env("CF_PHOENIX_POSTGRES_PASSWORD"),
+#  database: System.get_env("CF_PHOENIX_POSTGRES_DATABASE"),
 #  pool_size: 20
