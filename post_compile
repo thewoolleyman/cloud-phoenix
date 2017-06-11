@@ -6,12 +6,22 @@ set -e
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+echo "NVM version: $(nvm --version)"
 
 # install node via nvm
 nvm install node
+echo "Node version: $(node --version)"
 
 # install yarn
 #curl -o- -L https://yarnpkg.com/install.sh | bash # doesn't work
 wget https://yarnpkg.com/latest.tar.gz
 tar zxvf latest.tar.gz
+echo "Yarn version: $(dist/bin/yarn --version)"
 dist/bin/yarn install
+
+echo "Building static:"
+node_modules/brunch/bin/brunch build --production
+mix phoenix.digest
+
+ls priv/static
+ls priv/static/js
