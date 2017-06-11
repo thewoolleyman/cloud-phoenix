@@ -1,4 +1,6 @@
 ---
+env:
+  MIX_ENV: prod
 applications:
 - name: cf_phoenix
   memory: 1024M
@@ -6,4 +8,4 @@ applications:
   host: cf-phoenix
   domain: cfapps.io
   buildpack: https://github.com/HashNuke/heroku-buildpack-elixir.git
-  command: mix phoenix.server
+  command: ls priv/static && ls priv/static/js && mix phoenix.server
