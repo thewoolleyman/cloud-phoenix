@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+run() {
+  local dir=$(dirname ${BASH_SOURCE})
+  source "${dir}/bash-boilerplate.sh"
+
+  source "${dir}/set-env-vars.sh"
+
+  # install cf cli
+  curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx
+  ./cf --version
+
+  ./cf login -a ${CF_API_ENDPOINT} -u ${CF_USERNAME} -p ${CF_PASSWORD} -o ${CF_ORG} -s ${CF_SPACE}
+  ./cf target -o ${CF_ORG} -s ${CF_SPACE}
+}
+
+run

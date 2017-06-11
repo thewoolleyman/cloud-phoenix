@@ -1,0 +1,3 @@
+steps:
+  - label: ':cloudfoundry: cf push'
+    command: 'ci/cf-setup && ./cf push'
