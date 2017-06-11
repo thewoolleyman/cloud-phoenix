@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -e
+
+# install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# install node via nvm
+nvm install node
+
+# install yarn
+#curl -o- -L https://yarnpkg.com/install.sh | bash # doesn't work
+wget https://yarnpkg.com/latest.tar.gz
+tar zxvf latest.tar.gz
+dist/bin/yarn install
