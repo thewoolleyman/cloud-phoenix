@@ -1,20 +1,11 @@
-# CfPhoenix
+# cf_phoenix - Cloud Foundry Phoenix Elixir
 
-To start your Phoenix app:
+Example of running a Phoenix Elixir app on Pivotal Cloud Foundry (PWS/Pivotal Web Services)
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `npm install`
-  * Start Phoenix endpoint with `mix phoenix.server`
+* Uses https://github.com/HashNuke/heroku-buildpack-elixir.git custom buildpack
+* Compiles static files
+* Postgres database (elephantsql) service works (must manually provision)
+* Requires manual `cf set-env` of `CF_PHOENIX_SECRET_KEY_BASE`
+* Continuous Integration autodeploy via Buildkite
+* See repo tags for incremental steps taken to get it all working
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
