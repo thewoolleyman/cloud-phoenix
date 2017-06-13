@@ -10,10 +10,10 @@ config :cf_phoenix, CfPhoenix.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-#config :cf_phoenix, CfPhoenix.Repo,
-#  adapter: Ecto.Adapters.Postgres,
-#  username: "postgres",
-#  password: "postgres",
-#  database: "cf_phoenix_test",
-#  hostname: "localhost",
-#  pool: Ecto.Adapters.SQL.Sandbox
+config :cf_phoenix, CfPhoenix.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "cf_phoenix_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox

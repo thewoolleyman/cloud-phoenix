@@ -6,8 +6,8 @@
 use Mix.Config
 
 # General application configuration
-#config :cf_phoenix,
-#  ecto_repos: [CfPhoenix.Repo]
+config :cf_phoenix,
+  ecto_repos: [CfPhoenix.Repo]
 
 # Configures the endpoint
 config :cf_phoenix, CfPhoenix.Endpoint,

@@ -17,6 +17,7 @@ defmodule CfPhoenix.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/widgets", WidgetController
   end
 
   # Other scopes may use custom stacks.

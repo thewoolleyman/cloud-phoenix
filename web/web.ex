@@ -30,9 +30,9 @@ defmodule CfPhoenix.Web do
     quote do
       use Phoenix.Controller
 
-#      alias CfPhoenix.Repo
-#      import Ecto
-#      import Ecto.Query
+      alias CfPhoenix.Repo
+      import Ecto
+      import Ecto.Query
 
       import CfPhoenix.Router.Helpers
       import CfPhoenix.Gettext
@@ -65,9 +65,9 @@ defmodule CfPhoenix.Web do
     quote do
       use Phoenix.Channel
 
-#      alias CfPhoenix.Repo
-#      import Ecto
-#      import Ecto.Query
+      alias CfPhoenix.Repo
+      import Ecto
+      import Ecto.Query
       import CfPhoenix.Gettext
     end
   end
