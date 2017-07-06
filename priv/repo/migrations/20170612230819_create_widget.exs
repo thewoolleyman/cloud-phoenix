@@ -1,4 +1,4 @@
-defmodule CfPhoenix.Repo.Migrations.CreateWidget do
+defmodule CloudPhoenix.Repo.Migrations.CreateWidget do
   use Ecto.Migration
 
   def change do

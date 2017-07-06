@@ -1,3 +1,3 @@
-defmodule CfPhoenix.WidgetView do
-  use CfPhoenix.Web, :view
+defmodule CloudPhoenix.WidgetView do
+  use CloudPhoenix.Web, :view
 end

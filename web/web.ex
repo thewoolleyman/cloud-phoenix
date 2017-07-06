@@ -1,12 +1,12 @@
-defmodule CfPhoenix.Web do
+defmodule CloudPhoenix.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use CfPhoenix.Web, :controller
-      use CfPhoenix.Web, :view
+      use CloudPhoenix.Web, :controller
+      use CloudPhoenix.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule CfPhoenix.Web do
     quote do
       use Phoenix.Controller
 
-      alias CfPhoenix.Repo
+      alias CloudPhoenix.Repo
       import Ecto
       import Ecto.Query
 
-      import CfPhoenix.Router.Helpers
-      import CfPhoenix.Gettext
+      import CloudPhoenix.Router.Helpers
+      import CloudPhoenix.Gettext
     end
   end
 
@@ -49,9 +49,9 @@ defmodule CfPhoenix.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import CfPhoenix.Router.Helpers
-      import CfPhoenix.ErrorHelpers
-      import CfPhoenix.Gettext
+      import CloudPhoenix.Router.Helpers
+      import CloudPhoenix.ErrorHelpers
+      import CloudPhoenix.Gettext
     end
   end
 
@@ -65,10 +65,10 @@ defmodule CfPhoenix.Web do
     quote do
       use Phoenix.Channel
 
-      alias CfPhoenix.Repo
+      alias CloudPhoenix.Repo
       import Ecto
       import Ecto.Query
-      import CfPhoenix.Gettext
+      import CloudPhoenix.Gettext
     end
   end
 

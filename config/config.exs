@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :cf_phoenix,
-  ecto_repos: [CfPhoenix.Repo]
+config :cloud_phoenix,
+  ecto_repos: [CloudPhoenix.Repo]
 
 # Configures the endpoint
-config :cf_phoenix, CfPhoenix.Endpoint,
+config :cloud_phoenix, CloudPhoenix.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "WBdFrQi+vHMMYK2X0B1Y5P+Z9EJhFYqP7801P7iIV8r9OtDjPnMmEYLG97YbUi+Y",
-  render_errors: [view: CfPhoenix.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: CfPhoenix.PubSub,
+  render_errors: [view: CloudPhoenix.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: CloudPhoenix.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

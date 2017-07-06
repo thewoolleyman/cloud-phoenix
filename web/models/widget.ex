@@ -1,5 +1,5 @@
-defmodule CfPhoenix.Widget do
-  use CfPhoenix.Web, :model
+defmodule CloudPhoenix.Widget do
+  use CloudPhoenix.Web, :model
 
   schema "widgets" do
     field :name, :string

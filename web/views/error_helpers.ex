@@ -1,4 +1,4 @@
-defmodule CfPhoenix.ErrorHelpers do
+defmodule CloudPhoenix.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule CfPhoenix.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(CfPhoenix.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(CloudPhoenix.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(CfPhoenix.Gettext, "errors", msg, opts)
+      Gettext.dgettext(CloudPhoenix.Gettext, "errors", msg, opts)
     end
   end
 end

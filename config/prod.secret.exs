@@ -9,9 +9,9 @@ use Mix.Config
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or you later on).
 
-secret_key_base = System.get_env("CF_PHOENIX_SECRET_KEY_BASE") || raise "CF_PHOENIX_SECRET_KEY_BASE must be set"
+secret_key_base = System.get_env("CLOUD_PHOENIX_SECRET_KEY_BASE") || raise "CLOUD_PHOENIX_SECRET_KEY_BASE must be set"
 
-config :cf_phoenix, CfPhoenix.Endpoint,
+config :cloud_phoenix, CloudPhoenix.Endpoint,
   secret_key_base: secret_key_base
 
 ## Configure your database
@@ -55,7 +55,7 @@ end
 %{"username" => username, "password" => password, "host" => host, "port" => port, "database" => database} = captures
 
 
-config :cf_phoenix, CfPhoenix.Repo,
+config :cloud_phoenix, CloudPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: username,
   password: password,

@@ -1,8 +1,8 @@
-defmodule CfPhoenix.Mixfile do
+defmodule CloudPhoenix.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :cf_phoenix,
+    [app: :cloud_phoenix,
      version: "0.0.1",
      elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -17,7 +17,7 @@ defmodule CfPhoenix.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {CfPhoenix, []},
+    [mod: {CloudPhoenix, []},
      applications: [
       :phoenix,
       :phoenix_pubsub,

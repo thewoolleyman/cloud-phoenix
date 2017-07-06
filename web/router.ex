@@ -1,5 +1,5 @@
-defmodule CfPhoenix.Router do
-  use CfPhoenix.Web, :router
+defmodule CloudPhoenix.Router do
+  use CloudPhoenix.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,7 +13,7 @@ defmodule CfPhoenix.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", CfPhoenix do
+  scope "/", CloudPhoenix do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
@@ -21,7 +21,7 @@ defmodule CfPhoenix.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", CfPhoenix do
+  # scope "/api", CloudPhoenix do
   #   pipe_through :api
   # end
 end
