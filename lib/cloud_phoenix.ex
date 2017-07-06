@@ -1,4 +1,4 @@
-defmodule CfPhoenix do
+defmodule CloudPhoenix do
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
@@ -9,23 +9,23 @@ defmodule CfPhoenix do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(CfPhoenix.Repo, []),
+      supervisor(CloudPhoenix.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(CfPhoenix.Endpoint, []),
-      # Start your own worker by calling: CfPhoenix.Worker.start_link(arg1, arg2, arg3)
-      # worker(CfPhoenix.Worker, [arg1, arg2, arg3]),
+      supervisor(CloudPhoenix.Endpoint, []),
+      # Start your own worker by calling: CloudPhoenix.Worker.start_link(arg1, arg2, arg3)
+      # worker(CloudPhoenix.Worker, [arg1, arg2, arg3]),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: CfPhoenix.Supervisor]
+    opts = [strategy: :one_for_one, name: CloudPhoenix.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    CfPhoenix.Endpoint.config_change(changed, removed)
+    CloudPhoenix.Endpoint.config_change(changed, removed)
     :ok
   end
 end

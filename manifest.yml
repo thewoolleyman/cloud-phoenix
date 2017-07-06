@@ -2,10 +2,10 @@
 env:
   MIX_ENV: prod
 applications:
-- name: cf_phoenix
+- name: cloud-phoenix
   memory: 1024M
   instances: 1
-  host: cf-phoenix
+  host: cloud-phoenix
   domain: cfapps.io
   buildpack: https://github.com/HashNuke/heroku-buildpack-elixir.git
   # NOTE: Running the migration here assumes instances will always be set to 1!

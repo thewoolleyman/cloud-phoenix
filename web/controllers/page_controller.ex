@@ -1,5 +1,5 @@
-defmodule CfPhoenix.PageController do
-  use CfPhoenix.Web, :controller
+defmodule CloudPhoenix.PageController do
+  use CloudPhoenix.Web, :controller
 
   def index(conn, _params) do
     render conn, "index.html"

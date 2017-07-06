@@ -1,7 +1,7 @@
-defmodule CfPhoenix.WidgetController do
-  use CfPhoenix.Web, :controller
+defmodule CloudPhoenix.WidgetController do
+  use CloudPhoenix.Web, :controller
 
-  alias CfPhoenix.Widget
+  alias CloudPhoenix.Widget
 
   def index(conn, _params) do
     widgets = Repo.all(Widget)

@@ -1,3 +1,3 @@
-defmodule CfPhoenix.LayoutView do
-  use CfPhoenix.Web, :view
+defmodule CloudPhoenix.LayoutView do
+  use CloudPhoenix.Web, :view
 end

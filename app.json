@@ -1,12 +1,12 @@
 {
-  "name": "cf_phoenix",
+  "name": "cloud-phoenix",
   "description": "Pheonix app deployed to CloudFoundry and heroku.",
   "keywords": [
     "elixir",
     "phoenix"
   ],
-  "website": "https://github.com/thewoolleyman/cf_phoenix",
-  "repository": "https://github.com/thewoolleyman/cf_phoenix",
+  "website": "https://github.com/thewoolleyman/cloud-phoenix",
+  "repository": "https://github.com/thewoolleyman/cloud-phoenix",
   "success_url": "/",
   "env": {
   },

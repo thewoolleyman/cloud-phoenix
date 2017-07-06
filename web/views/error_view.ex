@@ -1,5 +1,5 @@
-defmodule CfPhoenix.ErrorView do
-  use CfPhoenix.Web, :view
+defmodule CloudPhoenix.ErrorView do
+  use CloudPhoenix.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"
