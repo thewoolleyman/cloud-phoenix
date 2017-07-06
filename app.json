@@ -1,0 +1,30 @@
+{
+  "name": "cf_phoenix",
+  "description": "Pheonix app deployed to CloudFoundry and heroku.",
+  "keywords": [
+    "elixir",
+    "phoenix"
+  ],
+  "website": "https://github.com/thewoolleyman/cf_phoenix",
+  "repository": "https://github.com/thewoolleyman/cf_phoenix",
+  "success_url": "/",
+  "env": {
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir",
+      "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static"
+    }
+  ]
+}
