@@ -1,0 +1,3 @@
+buildpacks:
+- https://github.com/thewoolleyman/heroku-buildpack-elixir
+#- https://github.com/thewoolleyman/heroku-buildpack-phoenix-static
