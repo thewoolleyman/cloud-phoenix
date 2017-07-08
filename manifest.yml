@@ -7,7 +7,7 @@ applications:
   instances: 1
   host: cloud-phoenix
   domain: cfapps.io
-  buildpack: https://github.com/HashNuke/heroku-buildpack-elixir.git
+  buildpack: https://github.com/thewoolleyman/heroku-buildpack-elixir.git#cf-phoenix-single-buildpack
   # NOTE: Running the migration here assumes instances will always be set to 1!
   #       Before scaling up instances to >1, there needs to be a custom mix task
   #       which only runs on first instance.  E.g. `mix cf.ecto.migrate.on_first_instance`
